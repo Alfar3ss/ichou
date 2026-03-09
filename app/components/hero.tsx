@@ -160,7 +160,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="mx-auto w-full max-w-sm"
+          className="mx-auto w-full max-w-[22rem]"
         >
           <motion.div
             onMouseMove={(event) => {
@@ -175,18 +175,18 @@ export function Hero() {
               rotateY.set(0);
             }}
             style={{ rotateX: rotateXSpring, rotateY: rotateYSpring }}
-            className="relative aspect-square rounded-lg border border-slate-900/15 bg-white p-4 shadow-[0_20px_40px_rgba(15,23,42,0.12)] dark:border-slate-700 dark:bg-slate-900"
+            className="relative aspect-[1015/1400] rounded-lg border border-slate-900/15 bg-white p-3 shadow-[0_20px_40px_rgba(15,23,42,0.12)] dark:border-slate-700 dark:bg-slate-900"
             animate={{ y: [0, -8, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
           >
             <div className="absolute inset-0 rounded-lg bg-[radial-gradient(circle_at_20%_20%,rgba(6,182,212,0.2),transparent_44%),radial-gradient(circle_at_80%_85%,rgba(244,63,94,0.14),transparent_50%)]" />
             <Image
-              src="/profile-grid.svg"
+              src="/profile.png"
               alt="Nour-Eddine Ichchou profile"
               fill
               sizes="(max-width: 768px) 80vw, 28rem"
               priority
-              className="rounded-md object-cover p-3"
+              className="rounded-md object-cover object-top"
             />
           </motion.div>
 

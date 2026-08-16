@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F8F4EC;
+  color: #22302D;
+}
+
+::selection {
+  background-color: #1D5C6B;
+  color: #F8F4EC;
+}
+
+:focus-visible {
+  outline: 2px solid #1D5C6B;
+  outline-offset: 3px;
+}
+
+/* subtle woven-plaster texture, quiet by default */
+.texture {
+  background-image: radial-gradient(circle at 1px 1px, rgba(29, 92, 107, 0.12) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+/* thin repeating zellige-tooth divider — a real Moroccan border motif, not a plain rule */
+.zellige-divider {
+  height: 10px;
+  background-image:
+    linear-gradient(45deg, #1D5C6B 25%, transparent 25%),
+    linear-gradient(-45deg, #1D5C6B 25%, transparent 25%);
+  background-size: 10px 10px;
+  background-position: 0 0;
+  opacity: 0.35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

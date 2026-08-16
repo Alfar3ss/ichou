@@ -25,32 +25,34 @@ const groups = [
 
 export function Skills() {
   return (
-    <section id="skills" className="scroll-mt-24 pt-20">
-      <p className="text-xs tracking-[0.24em] text-slate-500 uppercase dark:text-slate-300">Skills</p>
-      <h2 className="mt-2 text-3xl font-extrabold text-slate-950 sm:text-4xl dark:text-white">
-        Expertise & Toolkit
+    <section id="skills" className="scroll-mt-24 py-20">
+      <p className="font-mono text-[10px] uppercase tracking-[0.26em] text-[var(--saffron)]">
+        Skills
+      </p>
+      <h2 className="mt-4 max-w-lg font-display text-4xl leading-tight tracking-[-0.05em] text-[var(--foreground)]">
+        Practical expertise across product, code, and systems.
       </h2>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
-        {groups.map((group, index) => {
+        {groups.map((group) => {
           const Icon = group.icon;
 
           return (
             <article
               key={group.title}
-              className="relative overflow-hidden rounded-lg border border-slate-900/15 bg-white p-5 shadow-[0_12px_24px_rgba(15,23,42,0.08)] dark:border-slate-700 dark:bg-slate-900"
+              className="rounded-[1.75rem] border border-[var(--line)] bg-[var(--surface)] p-5"
             >
-              <div
-                className={`absolute inset-x-0 top-0 h-1 ${index % 2 === 0 ? "bg-cyan-600" : "bg-rose-600"}`}
-              />
-              <div className="flex items-center gap-2">
-                <Icon className={index % 2 === 0 ? "text-cyan-700" : "text-rose-600"} size={20} />
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{group.title}</h3>
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--surface-soft)] text-[var(--teal)]">
+                  <Icon size={17} />
+                </span>
+                <h3 className="text-lg font-semibold text-[var(--foreground)]">{group.title}</h3>
               </div>
 
-              <ul className="mt-3 space-y-2">
+              <ul className="mt-4 space-y-2 text-sm text-[var(--muted)]">
                 {group.items.map((item) => (
-                  <li key={item} className="text-sm text-slate-700 dark:text-slate-200">
+                  <li key={item} className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[var(--saffron)]" />
                     {item}
                   </li>
                 ))}

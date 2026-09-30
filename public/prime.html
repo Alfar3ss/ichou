@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Prime | Language school in Tétouan</title>
+<meta name="description" content="English Prime is a language school in Tétouan, Morocco. Learn practical English with qualified Moroccan and international teachers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E1B5C;
+  --navy-deep:#080F3A;
+  --red:#E3202E;
+  --red-dark:#C4161F;
+  --sky:#F2F6FD;
+  --sky-2:#E4ECF9;
+  --amber:#F5A524;
+  --ink:#1B2150;
+  --muted:#5B6391;
+  --line:#E2E8F5;
+  --white:#fff;
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:40px; --s6:48px; --s8:64px; --s10:80px; --s12:96px;
+  --shadow-sm:0 1px 2px rgba(14,27,92,.06),0 4px 12px rgba(14,27,92,.06);
+  --shadow-md:0 2px 4px rgba(14,27,92,.05),0 16px 40px rgba(14,27,92,.10);
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
+  --body:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --script:'Great Vibes','Brush Script MT',cursive;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;font-family:var(--body);font-size:16px;line-height:1.65;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--display);color:var(--navy);margin:0;font-weight:600;letter-spacing:-.01em;line-height:1.15}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--s3)}
+.icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon.sm{width:18px;height:18px}
+.icon.fill{fill:currentColor;stroke:none}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s1);padding:14px var(--s3);border-radius:999px;border:2px solid transparent;font-weight:700;font-size:15px;line-height:1.2;transition:background .2s,color .2s,border-color .2s,transform .2s,box-shadow .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(227,32,46,.25)}
+.btn-red:hover{background:var(--red-dark)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-deep)}
+.btn-ghost{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn-ghost:hover{background:var(--navy);color:#fff}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{background:var(--sky)}
+.btn-outline-white{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-outline-white:hover{background:#fff;color:var(--navy)}
+.btn-sm{padding:10px var(--s2);font-size:14px}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.site-header.scrolled{border-color:var(--line);box-shadow:0 4px 20px rgba(14,27,92,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:80px;gap:var(--s3)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:48px;height:48px;border-radius:50%;background:var(--navy);display:grid;place-items:center;line-height:1;position:relative;box-shadow:0 0 0 3px #fff,0 0 0 5px var(--sky-2)}
+.brand-mark span{font-family:var(--script);font-size:26px;color:#fff;transform:translate(-2px,-1px)}
+.brand-mark b{font-family:var(--body);font-weight:800;font-style:italic;font-size:18px;color:var(--red);position:absolute;right:8px;bottom:7px}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-text strong{font-family:var(--display);font-size:21px;font-weight:700;color:var(--navy)}
+.brand-text small{font-size:12px;color:var(--muted);font-weight:600;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:var(--s4)}
+.nav-links a.link{font-weight:600;font-size:15px;color:var(--ink);padding:8px 0;position:relative}
+.nav-links a.link::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav-links a.link:hover::after,.nav-links a.link.active::after{transform:scaleX(1)}
+.menu-btn{display:none;width:48px;height:48px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--navy);align-items:center;justify-content:center}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,var(--sky) 100%);padding:var(--s8) 0 var(--s12)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--s8);align-items:center}
+.hero-ar{font-size:18px;color:var(--red);font-weight:700;margin-bottom:var(--s2);direction:rtl;text-align:left}
+.hero h1{font-size:clamp(40px,5.4vw,68px);line-height:1.04;letter-spacing:-.02em;font-weight:700}
+.hero h1 span{display:block}
+.hero-sub{margin-top:var(--s3);font-size:19px;color:var(--muted);max-width:520px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
+.trust{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--line)}
+.trust li{display:flex;align-items:center;gap:12px;font-weight:700;font-size:14px;color:var(--navy)}
+.trust .dot{width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:var(--shadow-sm);display:grid;place-items:center;color:var(--red)}
+
+.stage{position:relative;min-height:580px}
+.stage-panel{position:absolute;inset:0 0 0 var(--s4);background:var(--navy);border-radius:32px;overflow:hidden}
+.stage-panel::before,.stage-panel::after{content:"";position:absolute;border-radius:50%;border:1.5px solid rgba(255,255,255,.12)}
+.stage-panel::before{width:420px;height:420px;right:-140px;top:-120px}
+.stage-panel::after{width:260px;height:260px;left:-90px;bottom:-80px}
+.stage-tag{position:absolute;top:var(--s3);left:var(--s5);display:flex;align-items:center;gap:var(--s1);color:#fff;font-size:14px;font-weight:600}
+.live{width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(227,32,46,.3)}
+.lesson{position:absolute;top:88px;left:var(--s6);right:var(--s3);background:#fff;border-radius:20px;padding:var(--s3);box-shadow:var(--shadow-md)}
+.lesson-head{display:flex;align-items:center;gap:12px;padding-bottom:var(--s2);border-bottom:1px solid var(--line);margin-bottom:var(--s2)}
+.lesson-head .av{width:40px;height:40px}
+.lesson-head strong{display:block;font-size:14px;color:var(--navy);line-height:1.3}
+.lesson-head span{font-size:13px;color:var(--muted)}
+.bubble{max-width:88%;padding:12px var(--s2);border-radius:16px;font-size:15px;line-height:1.45;margin-bottom:12px;opacity:0;transform:translateY(8px);animation:pop .5s ease forwards}
+.bubble.a{background:var(--sky);color:var(--ink);border-bottom-left-radius:4px}
+.bubble.b{background:var(--navy);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.bubble:nth-of-type(1){animation-delay:.5s}
+.bubble:nth-of-type(2){animation-delay:1.6s}
+.bubble:nth-of-type(3){animation-delay:2.7s}
+@keyframes pop{to{opacity:1;transform:none}}
+.phrase{margin-top:var(--s1);display:flex;align-items:center;gap:12px;padding:12px var(--s2);border-radius:12px;background:#FFF6E5;font-size:14px;color:var(--ink)}
+.phrase .icon{color:var(--amber)}
+.phrase b{color:var(--navy)}
+.float{position:absolute;background:#fff;border-radius:16px;box-shadow:var(--shadow-md)}
+.teacher-chip{left:0;bottom:var(--s8);display:flex;align-items:center;gap:12px;padding:12px var(--s2) 12px 12px}
+.teacher-chip .av{width:56px;height:56px;border-radius:12px}
+.teacher-chip strong{display:block;font-size:15px;color:var(--navy);line-height:1.3}
+.teacher-chip span{font-size:13px;color:var(--muted)}
+.goal-chip{right:var(--s3);bottom:var(--s3);padding:var(--s2);width:248px}
+.goal-chip small{display:block;font-size:13px;color:var(--muted);font-weight:600}
+.goal-chip strong{display:block;font-size:15px;color:var(--navy);margin:2px 0 12px}
+.bar{height:8px;border-radius:99px;background:var(--sky-2);overflow:hidden}
+.bar i{display:block;height:100%;width:68%;background:var(--red);border-radius:99px}
+.learners{position:absolute;left:var(--s6);bottom:var(--s3);display:flex;align-items:center;gap:12px;color:#fff;font-size:13px;font-weight:600}
+.learners .stack{display:flex}
+.learners .av{width:36px;height:36px;border-radius:50%;border:3px solid var(--navy);margin-left:-10px}
+.learners .av:first-child{margin-left:0}
+
+/* Avatars */
+.av{display:block;overflow:hidden;background:var(--sky-2)}
+.av svg{width:100%;height:100%}
+
+/* Sections */
+section{padding:var(--s12) 0}
+.sec-head{max-width:640px;margin-bottom:var(--s8)}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head h2{font-size:clamp(32px,4vw,44px)}
+.sec-head p{margin-top:var(--s2);color:var(--muted);font-size:18px}
+.bg-sky{background:var(--sky)}
+
+/* Why */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3)}
+.feature{background:#fff;border:1px solid var(--line);border-radius:16px;padding:var(--s4) var(--s3);transition:transform .25s,box-shadow .25s,border-color .25s}
+.feature:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:transparent}
+.ico-tile{width:56px;height:56px;border-radius:14px;background:var(--sky);color:var(--navy);display:grid;place-items:center;margin-bottom:var(--s3);transition:background .25s,color .25s}
+.feature:hover .ico-tile{background:var(--navy);color:#fff}
+.feature h3{font-size:21px;margin-bottom:var(--s1)}
+.feature p{color:var(--muted);font-size:15px}
+.languages{margin-top:var(--s8);display:flex;align-items:center;flex-wrap:wrap;gap:var(--s2) var(--s3);padding:var(--s3) var(--s4);border-radius:20px;background:var(--sky)}
+.languages h3{font-size:20px;margin-right:auto}
+.languages p{color:var(--muted);font-size:14px;width:100%;order:3}
+.lang{display:inline-flex;align-items:center;gap:8px;padding:8px var(--s2);border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:700;font-size:14px;color:var(--navy)}
+.lang.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.lang small{font-weight:600;color:var(--muted);font-size:12px}
+
+/* Goals */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4)}
+.goal{background:#fff;border-radius:24px;padding:var(--s5) var(--s4);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;border-top:6px solid var(--c)}
+.goal:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.goal .big-ico{width:72px;height:72px;border-radius:20px;background:var(--t);color:var(--c);display:grid;place-items:center;margin-bottom:var(--s3)}
+.goal .big-ico .icon{width:36px;height:36px}
+.goal h3{font-size:26px;margin-bottom:12px}
+.goal>p{color:var(--muted);margin-bottom:var(--s3)}
+.goal ul{margin-bottom:var(--s4);display:grid;gap:12px}
+.goal li{display:flex;gap:12px;font-size:15px;font-weight:600;color:var(--ink)}
+.goal li .icon{color:var(--c);margin-top:3px}
+.goal .btn{margin-top:auto;align-self:flex-start}
+.g-tourism{--c:#E08A00;--t:#FFF3DC}
+.g-comm{--c:var(--red);--t:#FDE8EA}
+.g-biz{--c:var(--navy);--t:var(--sky-2)}
+
+/* Teachers */
+.filters{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:var(--s5)}
+.chip{padding:10px var(--s3);border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:700;font-size:14px;color:var(--ink);transition:all .2s}
+.chip:hover{border-color:var(--navy)}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.teacher{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s}
+.teacher:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:transparent}
+.teacher .photo{position:relative;aspect-ratio:5/4;background:var(--sky-2)}
+.teacher .photo .av{width:100%;height:100%}
+.badge{position:absolute;top:12px;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700;line-height:1.5}
+.badge.origin{left:12px;background:#fff;color:var(--navy)}
+.badge.ex{right:12px;background:rgba(14,27,92,.82);color:#fff}
+.teacher .body{padding:var(--s3);display:flex;flex-direction:column;flex:1}
+.teacher h3{font-size:21px}
+.teacher .role{color:var(--muted);font-size:14px;font-weight:600;margin-top:2px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:var(--s2) 0}
+.tag{padding:4px 12px;border-radius:8px;background:var(--sky);font-size:13px;font-weight:700;color:var(--navy)}
+.exp{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);font-weight:600;margin-bottom:var(--s3)}
+.exp .icon{color:var(--red)}
+.teacher .btn{margin-top:auto;width:100%}
+.teachers-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s5)}
+.teachers-foot p{color:var(--muted);font-size:14px;max-width:560px}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;font-weight:800;color:var(--red);transition:gap .2s}
+.link-arrow:hover{gap:12px}
+
+/* How */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4);position:relative}
+.steps::before{content:"";position:absolute;top:32px;left:16.66%;right:16.66%;border-top:2px dashed #B8C4E4}
+.step{text-align:center;position:relative}
+.num{width:64px;height:64px;border-radius:50%;margin:0 auto var(--s3);background:var(--navy);color:#fff;font-family:var(--display);font-size:24px;font-weight:700;display:grid;place-items:center;box-shadow:0 0 0 8px var(--sky)}
+.step:nth-child(3) .num{background:var(--red)}
+.step h3{font-size:24px;margin-bottom:var(--s1)}
+.step p{color:var(--muted);max-width:300px;margin:0 auto}
+.platform-note{margin:var(--s8) auto 0;max-width:720px;display:flex;gap:var(--s2);align-items:flex-start;background:#fff;border-radius:16px;padding:var(--s3);box-shadow:var(--shadow-sm);font-size:15px;color:var(--muted)}
+.platform-note .icon{color:var(--amber);margin-top:2px}
+.platform-note b{color:var(--navy)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s10);align-items:center}
+.about-visual{position:relative;background:var(--navy);border-radius:32px;padding:var(--s8) var(--s5);min-height:480px;display:grid;place-items:center;overflow:hidden}
+.about-visual::before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;border:1.5px solid rgba(255,255,255,.12);top:-160px;left:-140px}
+.about-visual::after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;border:1.5px solid rgba(255,255,255,.12);bottom:-110px;right:-80px}
+.loc-card{position:absolute;left:var(--s3);right:var(--s3);bottom:var(--s3);z-index:2;background:#fff;border-radius:16px;padding:var(--s2) var(--s3);display:flex;align-items:center;gap:var(--s2);box-shadow:var(--shadow-md)}
+.loc-card .ico-tile{margin:0;width:48px;height:48px;background:#FDE8EA;color:var(--red)}
+.loc-card strong{display:block;color:var(--navy);line-height:1.3}
+.loc-card span{font-size:14px;color:var(--muted)}
+.about-copy h2{font-size:clamp(32px,4vw,44px);margin-bottom:var(--s3)}
+.about-copy>p{color:var(--muted);font-size:18px;margin-bottom:var(--s4)}
+.checks{display:grid;gap:var(--s2);margin-bottom:var(--s5)}
+.checks li{display:flex;gap:var(--s2);align-items:flex-start;font-weight:600}
+.checks .tick{width:28px;height:28px;border-radius:50%;background:var(--sky-2);color:var(--navy);display:grid;place-items:center;flex:none;margin-top:1px}
+
+/* Logo badge (large) */
+.logo-badge{position:relative;z-index:1;width:min(300px,100%);aspect-ratio:1;border-radius:50%;background:var(--navy-deep);border:6px solid #fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 0 10px rgba(255,255,255,.1)}
+.logo-badge .eng{font-family:var(--script);font-size:clamp(56px,9vw,84px);line-height:.9;color:#fff;margin-left:-44px}
+.logo-badge .prime{font-weight:800;font-style:italic;font-size:clamp(40px,6vw,58px);line-height:1;color:var(--red);margin-top:-8px;margin-left:30px;letter-spacing:-.01em}
+.logo-badge .pill{margin-top:16px;background:#fff;color:var(--navy);border-radius:999px;padding:2px 24px;font-family:var(--script);font-size:22px;line-height:1.5}
+
+/* Stats */
+.stats{background:var(--navy);color:#fff;padding:var(--s10) 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:0 var(--s3);text-align:center;border-left:1px solid rgba(255,255,255,.16)}
+.stat:first-child{border-left:0}
+.stat strong{display:block;font-family:var(--display);font-size:clamp(44px,5vw,60px);font-weight:600;line-height:1.1;color:#fff}
+.stat span{display:block;margin-top:var(--s1);color:#C9D3F2;font-size:15px;font-weight:600}
+.stats-note{margin-top:var(--s5);text-align:center;font-size:13px;color:#8C99CC}
+
+/* Testimonials */
+.quote{background:#fff;border-radius:20px;padding:var(--s4);box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+.stars{display:flex;gap:4px;color:var(--amber);margin-bottom:var(--s2)}
+.quote blockquote{margin:0 0 var(--s3);font-family:var(--display);font-size:20px;line-height:1.5;color:var(--navy);font-weight:500}
+.who{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:var(--s2);border-top:1px solid var(--line)}
+.ini{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;background:var(--navy)}
+.who strong{display:block;line-height:1.3;color:var(--navy)}
+.who span{font-size:14px;color:var(--muted)}
+.section-note{margin-top:var(--s4);text-align:center;font-size:13px;color:var(--muted)}
+
+/* Social */
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s2);max-width:760px;margin:0 auto var(--s5)}
+.post{aspect-ratio:1;border-radius:16px;padding:var(--s3);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative;transition:transform .25s,box-shadow .25s}
+.post:hover{transform:scale(1.03);box-shadow:var(--shadow-md);z-index:1}
+.post small{font-size:13px;font-weight:700;opacity:.85}
+.post h4{font-size:clamp(18px,2.4vw,26px);color:inherit;line-height:1.2}
+.post .s{font-family:var(--script);font-size:clamp(32px,4.4vw,48px);line-height:1;color:inherit}
+.p1{background:var(--navy);color:#fff}
+.p2{background:var(--red);color:#fff}
+.p3{background:var(--sky-2);color:var(--navy)}
+.p4{background:var(--amber);color:var(--navy-deep)}
+.p5{background:var(--navy-deep);color:#fff;align-items:center;justify-content:center;text-align:center;gap:4px}
+.p6{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.p5 .s{color:#fff}.p5 b{color:var(--red);font-style:italic;font-size:26px;line-height:1}
+.social-cta{text-align:center}
+.handle{display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:20px;color:var(--navy);margin-bottom:var(--s3)}
+.handle .ico-tile{margin:0;width:48px;height:48px;background:var(--navy);color:#fff;border-radius:50%}
+
+/* Final CTA */
+.cta-wrap{padding-top:var(--s6);padding-bottom:var(--s12)}
+.cta{background:var(--navy);border-radius:32px;padding:var(--s10) var(--s8);color:#fff;display:grid;grid-template-columns:1.2fr .8fr;gap:var(--s8);align-items:center;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:1.5px solid rgba(255,255,255,.12);right:-120px;top:-160px}
+.cta h2{color:#fff;font-size:clamp(34px,4.4vw,52px);margin-bottom:var(--s2)}
+.cta p{color:#C9D3F2;font-size:18px;max-width:480px}
+.cta .btns{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
+.contact-card{position:relative;background:#fff;color:var(--ink);border-radius:20px;padding:var(--s4)}
+.contact-card h3{font-size:22px;margin-bottom:var(--s3)}
+.contact-card li{display:flex;gap:var(--s2);align-items:flex-start;margin-bottom:var(--s2)}
+.contact-card li:last-child{margin-bottom:0}
+.contact-card .icon{color:var(--red);margin-top:3px}
+.contact-card small{display:block;color:var(--muted);font-size:13px;font-weight:600;line-height:1.3}
+.contact-card b{color:var(--navy)}
+
+/* Footer */
+footer{background:var(--navy-deep);color:#C9D3F2;padding:var(--s10) 0 var(--s4)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--s6)}
+.foot-brand .brand-text strong{color:#fff}
+.foot-brand .brand-text small{color:#8C99CC}
+.foot-brand .brand-mark{box-shadow:0 0 0 3px var(--navy-deep),0 0 0 5px rgba(255,255,255,.2)}
+.foot-brand p{margin:var(--s2) 0 var(--s3);font-size:15px;max-width:320px}
+footer h4{font-family:var(--body);font-size:15px;font-weight:800;color:#fff;margin-bottom:var(--s2);letter-spacing:0}
+footer li{margin-bottom:12px;font-size:15px}
+footer li a{transition:color .2s}
+footer li a:hover{color:#fff}
+.social{display:flex;gap:12px}
+.social a{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;color:#fff;transition:background .2s}
+.social a:hover{background:var(--red)}
+.foot-bottom{margin-top:var(--s8);padding-top:var(--s3);border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s1);font-size:14px;color:#8C99CC}
+
+/* Prototype badge + toast */
+.proto{position:fixed;left:var(--s2);bottom:var(--s2);z-index:60;display:flex;align-items:center;gap:8px;background:var(--navy-deep);color:#fff;border:0;padding:8px 16px;border-radius:999px;font-size:13px;font-weight:700;box-shadow:var(--shadow-md)}
+.proto i{width:8px;height:8px;border-radius:50%;background:var(--amber)}
+.toast{position:fixed;left:50%;bottom:var(--s5);transform:translate(-50%,24px);background:var(--navy-deep);color:#fff;padding:14px var(--s3);border-radius:12px;font-size:15px;font-weight:600;box-shadow:var(--shadow-md);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:70;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* Responsive */
+@media (max-width:1024px){
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{grid-template-columns:1fr;gap:var(--s8)}
+  .stage{max-width:560px;margin:0 auto;width:100%}
+  .about-grid{grid-template-columns:1fr;gap:var(--s6)}
+  .cta{grid-template-columns:1fr;padding:var(--s8) var(--s4)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .menu-btn{display:inline-flex}
+  .nav-links{position:absolute;top:80px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 20px 30px rgba(14,27,92,.08);padding:var(--s1) var(--s3) var(--s3);display:none}
+  .nav-links.open{display:flex}
+  .nav-links a.link{padding:16px 0;border-bottom:1px solid var(--line)}
+  .nav-links a.link::after{display:none}
+  .nav-links .btn{margin-top:var(--s2)}
+  .grid-3{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:var(--s5)}
+  .steps::before{display:none}
+  .stats-grid{grid-template-columns:repeat(2,1fr);row-gap:var(--s5)}
+  .stat:nth-child(3){border-left:0}
+}
+@media (max-width:640px){
+  section{padding:var(--s10) 0}
+  .hero{padding:var(--s5) 0 var(--s10)}
+  .grid-4{grid-template-columns:1fr}
+  .stage{min-height:0}
+  .stage-panel{position:relative;inset:auto;padding:var(--s3) var(--s2) var(--s3);border-radius:24px}
+  .stage-tag,.lesson,.float,.learners{position:relative;inset:auto;width:auto}
+  .stage-tag{margin-bottom:var(--s2)}
+  .lesson{margin-bottom:var(--s2)}
+  .teacher-chip{margin-bottom:var(--s2)}
+  .goal-chip{margin-bottom:var(--s3)}
+  .learners{left:auto;bottom:auto}
+  .stage-panel::before,.stage-panel::after{display:none}
+  .social-grid{gap:8px}
+  .post{padding:var(--s2);border-radius:12px}
+  .post small{display:none}
+  .cta{padding:var(--s6) var(--s3);border-radius:24px}
+  .foot-grid{grid-template-columns:1fr}
+  .languages{padding:var(--s3)}
+  .about-visual{min-height:440px;padding:var(--s5) var(--s3) 120px}
+  .logo-badge .eng{margin-left:-28px}
+  .logo-badge .prime{margin-left:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important}
+  .bubble{animation:none;opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.8 5.4a2 2 0 0 1-1.27 1.27L7.76 16.24l1.8-5.4a2 2 0 0 1 1.27-1.27z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header" id="header">
+  <div class="container nav">
+    <a href="#home" class="brand" aria-label="English Prime home">
+      <span class="brand-mark" aria-hidden="true"><span>E</span><b>P</b></span>
+      <span class="brand-text"><strong>English Prime</strong><small>Enjoy learning</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <svg class="icon" id="menuIcon"><use href="#i-menu"/></svg>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a class="link active" href="#home">Home</a>
+      <a class="link" href="#about">About Us</a>
+      <a class="link" href="#languages">Languages</a>
+      <a class="link" href="#teachers">Teachers</a>
+      <a class="link" href="#goals">Learning Programs</a>
+      <a class="link" href="#contact">Contact</a>
+      <a class="btn btn-red btn-sm" href="#goals">Start Learning</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home" style="padding-bottom:var(--s12)">
+  <div class="container hero-grid">
+    <div>
+      <p class="hero-ar" lang="ar">ابدأ رحلة تعلمك اليوم</p>
+      <h1><span>Learn English.</span><span>Build Confidence.</span><span>Open New Opportunities.</span></h1>
+      <p class="hero-sub">Discover a better way to learn English with experienced teachers and programs designed around your goals.</p>
+      <div class="hero-cta">
+        <a class="btn btn-red" href="#teachers">Find Your Teacher <svg class="icon sm"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#goals">Explore Programs</a>
+      </div>
+      <ul class="trust">
+        <li><span class="dot"><svg class="icon sm"><use href="#i-cap"/></svg></span>Qualified Teachers</li>
+        <li><span class="dot"><svg class="icon sm"><use href="#i-target"/></svg></span>Personalized Learning</li>
+        <li><span class="dot"><svg class="icon sm"><use href="#i-compass"/></svg></span>Tourism, Communication, Business</li>
+      </ul>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <div class="stage-panel"></div>
+      <div class="stage-tag"><span class="live"></span>Lesson preview</div>
+      <div class="lesson">
+        <div class="lesson-head">
+          <span class="av" data-av="sarah" style="border-radius:50%"></span>
+          <div><strong>English for Tourism</strong><span>Speaking practice, Level B1</span></div>
+        </div>
+        <div class="bubble a">Good morning! Could you recommend a place for lunch?</div>
+        <div class="bubble b">Of course! There is a lovely restaurant near the medina. Shall I book a table?</div>
+        <div class="bubble a">That would be great, thank you.</div>
+        <div class="phrase"><svg class="icon sm"><use href="#i-book"/></svg><span>Useful phrase: <b>"Shall I book a table for you?"</b></span></div>
+      </div>
+      <div class="float teacher-chip">
+        <span class="av" data-av="sarah"></span>
+        <div><strong>Sarah El Amrani</strong><span>English Teacher, 8 years</span></div>
+      </div>
+      <div class="float goal-chip">
+        <small>Your goal</small>
+        <strong>English for Tourism</strong>
+        <div class="bar"><i></i></div>
+      </div>
+      <div class="learners">
+        <div class="stack"><span class="av" data-av="s1"></span><span class="av" data-av="s2"></span><span class="av" data-av="s3"></span></div>
+        Small groups, real conversations
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="container">
+    <div class="sec-head center">
+      <h2>Your English Journey Starts Here</h2>
+      <p>English Prime helps students and professionals speak with confidence, in lessons that feel useful from the first day.</p>
+    </div>
+    <div class="grid-4">
+      <article class="feature">
+        <div class="ico-tile"><svg class="icon"><use href="#i-cap"/></svg></div>
+        <h3>Qualified Teachers</h3>
+        <p>Moroccan and international teachers with real classroom experience and a clear method.</p>
+      </article>
+      <article class="feature">
+        <div class="ico-tile"><svg class="icon"><use href="#i-chat"/></svg></div>
+        <h3>Practical English</h3>
+        <p>Speak, listen and write about situations you will meet at work, at university and with visitors.</p>
+      </article>
+      <article class="feature">
+        <div class="ico-tile"><svg class="icon"><use href="#i-target"/></svg></div>
+        <h3>Personalized Learning</h3>
+        <p>Choose a goal and a teacher that fit your level, your schedule and the way you learn.</p>
+      </article>
+      <article class="feature">
+        <div class="ico-tile"><svg class="icon"><use href="#i-heart"/></svg></div>
+        <h3>Supportive Environment</h3>
+        <p>A friendly school where mistakes are part of learning and every student is encouraged to speak.</p>
+      </article>
+    </div>
+
+    <div class="languages" id="languages">
+      <h3>Teaching languages</h3>
+      <span class="lang on"><svg class="icon sm"><use href="#i-check"/></svg>English <small>Available</small></span>
+      <span class="lang">French <small>Example</small></span>
+      <span class="lang">Spanish <small>Example</small></span>
+      <span class="lang">Arabic <small>Example</small></span>
+      <p>English Prime starts with English. Other languages shown here are examples of how the school can grow; the real list will be confirmed with the school.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GOALS -->
+<section class="bg-sky" id="goals">
+  <div class="container">
+    <div class="sec-head center">
+      <h2>Choose Your Learning Goal</h2>
+      <p>Start with what you want English for. We will show you the teachers who specialise in it.</p>
+    </div>
+    <div class="grid-3">
+      <article class="goal g-tourism">
+        <div class="big-ico"><svg class="icon"><use href="#i-compass"/></svg></div>
+        <h3>English for Tourism</h3>
+        <p>For professionals and students who want to communicate confidently with tourists and international visitors.</p>
+        <ul>
+          <li><svg class="icon sm"><use href="#i-check"/></svg>Welcoming and guiding guests</li>
+          <li><svg class="icon sm"><use href="#i-check"/></svg>Hotels, restaurants and tours</li>
+          <li><svg class="icon sm"><use href="#i-check"/></svg>Explaining culture and places</li>
+        </ul>
+        <button class="btn btn-navy" data-goal="tourism">Explore Program <svg class="icon sm"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="goal g-comm">
+        <div class="big-ico"><svg class="icon"><use href="#i-chat"/></svg></div>
+        <h3>English for Communication</h3>
+        <p>Improve everyday speaking, listening and communication skills.</p>
+        <ul>
+          <li><svg class="icon sm"><use href="#i-check"/></svg>Fluent, natural conversation</li>
+          <li><svg class="icon sm"><use href="#i-check"/></svg>Clear pronunciation</li>
+          <li><svg class="icon sm"><use href="#i-check"/></svg>Understanding real speakers</li>
+        </ul>
+        <button class="btn btn-navy" data-goal="communication">Explore Program <svg class="icon sm"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="goal g-biz">
+        <div class="big-ico"><svg class="icon"><use href="#i-brief"/></svg></div>
+        <h3>Business English</h3>
+        <p>Develop professional English skills for meetings, emails, presentations and the workplace.</p>
+        <ul>
+          <li><svg class="icon sm"><use href="#i-check"/></svg>Meetings and negotiations</li>
+          <li><svg class="icon sm"><use href="#i-check"/></svg>Professional emails and reports</li>
+          <li><svg class="icon sm"><use href="#i-check"/></svg>Presentations with confidence</li>
+        </ul>
+        <button class="btn btn-navy" data-goal="business">Explore Program <svg class="icon sm"><use href="#i-arrow"/></svg></button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHERS -->
+<section id="teachers">
+  <div class="container">
+    <div class="sec-head">
+      <h2>Meet Our Teachers</h2>
+      <p>Pick a goal to see the teachers who fit it. These are example teachers for the prototype.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter teachers by learning goal" id="filters">
+      <button class="chip" data-filter="all" aria-pressed="true">All teachers</button>
+      <button class="chip" data-filter="tourism" aria-pressed="false">Tourism</button>
+      <button class="chip" data-filter="communication" aria-pressed="false">Communication</button>
+      <button class="chip" data-filter="business" aria-pressed="false">Business English</button>
+    </div>
+    <div class="grid-3" id="teacherGrid"></div>
+    <div class="teachers-foot">
+      <p>Example profiles only. On the live platform, approved teachers will be loaded from the school's database.</p>
+      <a class="link-arrow" href="#teachers" data-toast="The full teacher directory will open here on the live platform.">Meet All Teachers <svg class="icon sm"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="bg-sky" id="how">
+  <div class="container">
+    <div class="sec-head center">
+      <h2>How It Works</h2>
+      <p>Three simple steps from your first click to your first lesson.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Choose Your Goal</h3>
+        <p>Select Tourism, Communication or Business English.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Find Your Teacher</h3>
+        <p>Explore our approved teachers and discover the right match.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Start Learning</h3>
+        <p>Begin your English learning journey.</p>
+      </div>
+    </div>
+    <div class="platform-note">
+      <svg class="icon"><use href="#i-info"/></svg>
+      <p><b>Try it on this page.</b> Choose a goal above and the teacher list updates. The complete version will let students view profiles and select a teacher.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-visual">
+      <div class="logo-badge" role="img" aria-label="English Prime logo: Enjoy learning">
+        <span class="eng">English</span>
+        <span class="prime">Prime</span>
+        <span class="pill">Enjoy learning</span>
+      </div>
+      <div class="loc-card">
+        <div class="ico-tile"><svg class="icon"><use href="#i-pin"/></svg></div>
+        <div><strong>Tétouan, Morocco</strong><span>Near Masjid Badr</span></div>
+      </div>
+    </div>
+    <div class="about-copy">
+      <h2>About English Prime</h2>
+      <p>English Prime is a language school based in Tétouan, Morocco, focused on helping students and professionals develop practical English skills.</p>
+      <ul class="checks">
+        <li><span class="tick"><svg class="icon sm"><use href="#i-check"/></svg></span>Experienced teachers who know how to keep lessons clear and motivating</li>
+        <li><span class="tick"><svg class="icon sm"><use href="#i-check"/></svg></span>Moroccan and international teaching experience in one school</li>
+        <li><span class="tick"><svg class="icon sm"><use href="#i-check"/></svg></span>Practical communication for work, study and everyday life</li>
+        <li><span class="tick"><svg class="icon sm"><use href="#i-check"/></svg></span>A modern, student-focused learning approach</li>
+      </ul>
+      <a class="btn btn-navy" href="#about" data-toast="The full About page will open here on the live website.">Learn More About Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" aria-label="School statistics">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat"><strong data-edit>2,000+</strong><span>Students &amp; Learners</span></div>
+      <div class="stat"><strong data-edit>10+</strong><span>Qualified Teachers</span></div>
+      <div class="stat"><strong data-edit>3</strong><span>Learning Programs</span></div>
+      <div class="stat"><strong data-edit>100%</strong><span>Focused on Your Progress</span></div>
+    </div>
+    <p class="stats-note">Placeholder numbers. To be replaced with the school's real figures.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="bg-sky" id="testimonials">
+  <div class="container">
+    <div class="sec-head center">
+      <h2>What Our Students Say</h2>
+      <p>Stories from learners who took the next step.</p>
+    </div>
+    <div class="grid-3">
+      <figure class="quote" style="margin:0">
+        <div class="stars" aria-label="5 out of 5 stars"><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg></div>
+        <blockquote>"English Prime helped me become much more confident when speaking with international clients."</blockquote>
+        <figcaption class="who"><span class="ini" style="background:var(--navy)">HO</span><div><strong>Hamza Ouazzani</strong><span>Hotel receptionist</span></div></figcaption>
+      </figure>
+      <figure class="quote" style="margin:0">
+        <div class="stars" aria-label="5 out of 5 stars"><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg></div>
+        <blockquote>"The lessons are practical and friendly. I finally stopped being afraid of making mistakes when I speak."</blockquote>
+        <figcaption class="who"><span class="ini" style="background:var(--red)">SB</span><div><strong>Salma Benjelloun</strong><span>University student</span></div></figcaption>
+      </figure>
+      <figure class="quote" style="margin:0">
+        <div class="stars" aria-label="5 out of 5 stars"><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg><svg class="icon sm fill"><use href="#i-star"/></svg></div>
+        <blockquote>"My teacher focused on emails and presentations, exactly what I needed for my job."</blockquote>
+        <figcaption class="who"><span class="ini" style="background:#E08A00">KE</span><div><strong>Karim El Idrissi</strong><span>Sales manager</span></div></figcaption>
+      </figure>
+    </div>
+    <p class="section-note">Placeholder testimonials for the design prototype. Names and quotes are examples.</p>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social">
+  <div class="container">
+    <div class="sec-head center">
+      <h2>Follow English Prime</h2>
+      <p>Follow us for English tips, learning activities and updates from English Prime.</p>
+    </div>
+    <div class="social-grid">
+      <div class="post p1"><small>Word of the day</small><div><div class="s">Hospitality</div></div></div>
+      <div class="post p2"><small>Say it in English</small><h4>"Could you tell me the way to the medina?"</h4></div>
+      <div class="post p3"><small>Quick tip</small><h4>Make a decision, do your homework.</h4></div>
+      <div class="post p4"><small>Speaking club</small><h4>Join our weekly conversation session</h4></div>
+      <div class="post p5"><span class="s">English</span><b>Prime</b></div>
+      <div class="post p6"><small>New groups</small><h4>A new level starts soon. Ask us for dates.</h4></div>
+    </div>
+    <div class="social-cta">
+      <div class="handle"><span class="ico-tile"><svg class="icon"><use href="#i-insta"/></svg></span>@english_prime1</div><br>
+      <a class="btn btn-red" href="https://www.instagram.com/english_prime1/" target="_blank" rel="noopener">Follow on Instagram</a>
+      <p class="section-note">Placeholder post designs. The live site can show real posts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="cta-wrap" id="contact" style="padding-top:var(--s6)">
+  <div class="container">
+    <div class="cta">
+      <div style="position:relative">
+        <h2>Ready to Start Learning?</h2>
+        <p>Choose your learning goal and take the next step with English Prime.</p>
+        <div class="btns">
+          <a class="btn btn-red" href="#goals">Find a Teacher</a>
+          <a class="btn btn-outline-white" href="tel:0808559374">Contact Us</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <h3>English Prime</h3>
+        <ul>
+          <li><svg class="icon"><use href="#i-pin"/></svg><div><small>Address</small><b>Tétouan, Morocco</b><br><span style="font-size:14px;color:var(--muted)">Near Masjid Badr</span></div></li>
+          <li><svg class="icon"><use href="#i-phone"/></svg><div><small>Phone</small><a href="tel:0808559374"><b>08 08 55 93 74</b></a></div></li>
+          <li><svg class="icon"><use href="#i-insta"/></svg><div><small>Instagram</small><a href="https://www.instagram.com/english_prime1/" target="_blank" rel="noopener"><b>@english_prime1</b></a></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#home" class="brand">
+          <span class="brand-mark" aria-hidden="true"><span>E</span><b>P</b></span>
+          <span class="brand-text"><strong>English Prime</strong><small>Enjoy learning</small></span>
+        </a>
+        <p>A language school in Tétouan helping students and professionals build practical English skills with qualified teachers.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/english_prime1/" target="_blank" rel="noopener" aria-label="English Prime on Instagram"><svg class="icon"><use href="#i-insta"/></svg></a>
+          <a href="tel:0808559374" aria-label="Call English Prime"><svg class="icon"><use href="#i-phone"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#languages">Languages</a></li>
+          <li><a href="#teachers">Teachers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#goals">English for Tourism</a></li>
+          <li><a href="#goals">English for Communication</a></li>
+          <li><a href="#goals">Business English</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Tétouan, Morocco</li>
+          <li>Near Masjid Badr</li>
+          <li><a href="tel:0808559374">08 08 55 93 74</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 English Prime. All rights reserved.</span>
+      <span>Website design prototype</span>
+    </div>
+  </div>
+</footer>
+
+<button class="proto" id="proto" aria-label="Dismiss prototype notice"><i></i>Design prototype. Example content.</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  /* ---------- Avatars (flat illustrations, no external images) ---------- */
+  var PRESETS = {
+    sarah:   {bg:'#DCE6F7',skin:'#E2AE86',hair:'#2A1B17',shirt:'#0E1B5C',style:'long'},
+    youssef: {bg:'#FBE3D0',skin:'#C98E65',hair:'#1E1714',shirt:'#3B4A8C',style:'short',beard:true},
+    emma:    {bg:'#E6F0E2',skin:'#F2D0B0',hair:'#B5652B',shirt:'#E3202E',style:'long'},
+    imane:   {bg:'#FFEFD0',skin:'#E8B98F',scarf:'#0E1B5C',shirt:'#0E1B5C',style:'hijab'},
+    daniel:  {bg:'#E4E4F4',skin:'#EBC29D',hair:'#5A3A22',shirt:'#23305F',style:'short',beard:true},
+    khadija: {bg:'#FDE2E4',skin:'#D9A47A',hair:'#231915',shirt:'#B81C28',style:'long'},
+    s1:      {bg:'#F5A524',skin:'#E2AE86',hair:'#2A1B17',shirt:'#fff',style:'short'},
+    s2:      {bg:'#9FB4E6',skin:'#C98E65',hair:'#1E1714',shirt:'#fff',style:'long'},
+    s3:      {bg:'#F3A3AB',skin:'#E8B98F',scarf:'#fff',shirt:'#fff',style:'hijab'}
+  };
+  function avatar(p){
+    var pre='',post='',front='',beard='';
+    var head='<ellipse cx="100" cy="112" rx="38" ry="44" fill="'+p.skin+'"/>';
+    if(p.style==='long'){
+      pre='<path d="M57 112C49 60 80 46 102 46c30 0 50 22 42 84l6 50H50z" fill="'+p.hair+'"/>';
+      front='<path d="M62 106C62 70 84 58 102 58c22 0 36 18 36 48-8-18-22-26-38-26-14 0-28 8-38 26z" fill="'+p.hair+'"/>';
+    } else if(p.style==='short'){
+      front='<path d="M61 106C58 66 82 54 102 54c26 0 42 18 38 52-6-20-20-28-40-28-18 0-30 8-39 28z" fill="'+p.hair+'"/>';
+    } else if(p.style==='hijab'){
+      post='<path d="M50 120C44 62 76 44 100 44c28 0 56 18 50 76-2 34-10 56-20 70H70c-10-14-18-36-20-70z" fill="'+p.scarf+'"/>';
+      head='<ellipse cx="100" cy="114" rx="30" ry="37" fill="'+p.skin+'"/>';
+    }
+    if(p.beard){
+      beard='<path d="M64 120c2 32 20 40 36 40s34-8 36-40c-8 16-20 20-36 20s-28-4-36-20z" fill="'+p.hair+'"/>';
+    }
+    var face='<circle cx="87" cy="113" r="3" fill="#23263f"/><circle cx="113" cy="113" r="3" fill="#23263f"/><path d="M91 129q9 7 18 0" stroke="'+(p.beard?'#fff':'#23263f')+'" stroke-width="2.6" fill="none" stroke-linecap="round"/>';
+    return '<svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'+
+      '<rect width="200" height="240" fill="'+p.bg+'"/>'+pre+
+      '<path d="M16 240C16 186 58 168 100 168s84 18 84 72z" fill="'+p.shirt+'"/>'+
+      '<rect x="88" y="138" width="24" height="38" rx="10" fill="'+p.skin+'"/>'+post+head+front+beard+face+'</svg>';
+  }
+  function fillAvatars(root){
+    (root||document).querySelectorAll('[data-av]').forEach(function(el){
+      var p=PRESETS[el.getAttribute('data-av')]; if(p) el.innerHTML=avatar(p);
+    });
+  }
+
+  /* ---------- Example teacher data (replace with database later) ---------- */
+  var TEACHERS = [
+    {name:'Sarah El Amrani', av:'sarah',   origin:'Moroccan',      tags:['Tourism','Communication'],  goals:['tourism','communication'], years:8},
+    {name:'Youssef Benali',  av:'youssef', origin:'Moroccan',      tags:['Business','Communication'], goals:['business','communication'], years:10},
+    {name:'Emma Clarke',     av:'emma',    origin:'International', tags:['Communication','Business'], goals:['communication','business'], years:6},
+    {name:'Imane Tazi',      av:'imane',   origin:'Moroccan',      tags:['Tourism'],                  goals:['tourism'], years:5},
+    {name:'Daniel Foster',   av:'daniel',  origin:'International', tags:['Tourism','Communication'],  goals:['tourism','communication'], years:12},
+    {name:'Khadija Moussaoui',av:'khadija',origin:'Moroccan',      tags:['Business','Communication'], goals:['business','communication'], years:7}
+  ];
+  var grid=document.getElementById('teacherGrid');
+  function renderTeachers(filter){
+    var list=TEACHERS.filter(function(t){return filter==='all'||t.goals.indexOf(filter)>-1;});
+    grid.innerHTML=list.map(function(t){
+      return '<article class="teacher">'+
+        '<div class="photo"><span class="av" data-av="'+t.av+'"></span>'+
+        '<span class="badge origin">'+t.origin+'</span><span class="badge ex">Example</span></div>'+
+        '<div class="body">'+
+          '<h3>'+t.name+'</h3><div class="role">English Teacher</div>'+
+          '<div class="tags">'+t.tags.map(function(x){return '<span class="tag">'+x+'</span>';}).join('')+'</div>'+
+          '<div class="exp"><svg class="icon sm"><use href="#i-clock"/></svg>'+t.years+' years experience</div>'+
+          '<button class="btn btn-ghost btn-sm" data-toast="Teacher profiles will open here on the live platform.">View Profile</button>'+
+        '</div></article>';
+    }).join('');
+    fillAvatars(grid);
+  }
+  function setFilter(f,scroll){
+    document.querySelectorAll('#filters .chip').forEach(function(c){
+      c.setAttribute('aria-pressed', c.getAttribute('data-filter')===f ? 'true':'false');
+    });
+    renderTeachers(f);
+    if(scroll){document.getElementById('teachers').scrollIntoView({behavior:'smooth'});}
+  }
+  document.getElementById('filters').addEventListener('click',function(e){
+    var b=e.target.closest('.chip'); if(b) setFilter(b.getAttribute('data-filter'),false);
+  });
+  document.querySelectorAll('[data-goal]').forEach(function(b){
+    b.addEventListener('click',function(){setFilter(b.getAttribute('data-goal'),true);});
+  });
+
+  /* ---------- Toast ---------- */
+  var toast=document.getElementById('toast'),tt;
+  function showToast(msg){
+    toast.textContent=msg; toast.classList.add('show');
+    clearTimeout(tt); tt=setTimeout(function(){toast.classList.remove('show');},2800);
+  }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('[data-toast]');
+    if(el){ if(el.tagName==='A') e.preventDefault(); showToast(el.getAttribute('data-toast')); }
+  });
+
+  /* ---------- Header / nav ---------- */
+  var header=document.getElementById('header'),
+      menuBtn=document.getElementById('menuBtn'),
+      links=document.getElementById('navLinks'),
+      icon=document.getElementById('menuIcon');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>8);}
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  function closeMenu(){
+    links.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false');
+    menuBtn.setAttribute('aria-label','Open menu'); icon.firstElementChild.setAttribute('href','#i-menu');
+  }
+  menuBtn.addEventListener('click',function(){
+    var open=links.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');
+    icon.firstElementChild.setAttribute('href',open?'#i-x':'#i-menu');
+  });
+  links.addEventListener('click',function(e){if(e.target.closest('a')) closeMenu();});
+
+  /* Active link on scroll */
+  var navLinks=Array.prototype.slice.call(document.querySelectorAll('.nav-links a.link'));
+  var ids=['home','about','languages','teachers','goals','contact'];
+  if('IntersectionObserver' in window){
+    var seen={};
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){seen[en.target.id]=en.isIntersecting;});
+      var current=ids.filter(function(id){return seen[id];})[0];
+      if(current){navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+current);});}
+    },{rootMargin:'-40% 0px -50% 0px'});
+    ids.forEach(function(id){var s=document.getElementById(id); if(s) io.observe(s);});
+  }
+
+  /* Prototype badge */
+  document.getElementById('proto').addEventListener('click',function(){this.style.display='none';});
+
+  /* Init */
+  fillAvatars();
+  renderTeachers('all');
+})();
+</script>
+</body>
+</html>

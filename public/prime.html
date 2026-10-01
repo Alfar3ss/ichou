@@ -28,10 +28,10 @@
   --body:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --script:'Great Vibes','Brush Script MT',cursive;
 }
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:88px}
-body{margin:0;font-family:var(--body);font-size:16px;line-height:1.65;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
-img,svg{display:block;max-width:100%}
+*,*::before,*::after{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px;overflow-x:hidden}
+body{margin:0;font-family:var(--body);font-size:16px;line-height:1.65;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;min-width:320px;overflow-x:hidden}
+img,svg{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,h4{font-family:var(--display);color:var(--navy);margin:0;font-weight:600;letter-spacing:-.01em;line-height:1.15}
 p{margin:0}
@@ -323,7 +323,17 @@ footer li a:hover{color:#fff}
 }
 @media (max-width:640px){
   section{padding:var(--s10) 0}
+  .nav{height:auto;min-height:72px;padding:10px 0}
+  .brand{gap:8px;min-width:0}
+  .brand-text strong{font-size:18px}
+  .brand-text small{font-size:11px}
   .hero{padding:var(--s5) 0 var(--s10)}
+  .hero h1{font-size:clamp(32px,11vw,48px)}
+  .hero-sub{font-size:17px}
+  .hero-cta{display:grid;grid-template-columns:1fr;gap:12px}
+  .hero-cta .btn,.cta .btns .btn{width:100%}
+  .trust{gap:12px}
+  .trust li{width:100%}
   .grid-4{grid-template-columns:1fr}
   .stage{min-height:0}
   .stage-panel{position:relative;inset:auto;padding:var(--s3) var(--s2) var(--s3);border-radius:24px}
@@ -334,7 +344,7 @@ footer li a:hover{color:#fff}
   .goal-chip{margin-bottom:var(--s3)}
   .learners{left:auto;bottom:auto}
   .stage-panel::before,.stage-panel::after{display:none}
-  .social-grid{gap:8px}
+  .social-grid{grid-template-columns:repeat(2,1fr);gap:8px}
   .post{padding:var(--s2);border-radius:12px}
   .post small{display:none}
   .cta{padding:var(--s6) var(--s3);border-radius:24px}
@@ -343,6 +353,13 @@ footer li a:hover{color:#fff}
   .about-visual{min-height:440px;padding:var(--s5) var(--s3) 120px}
   .logo-badge .eng{margin-left:-28px}
   .logo-badge .prime{margin-left:20px}
+}
+@media (max-width:480px){
+  .nav-links .btn{width:100%}
+  .social-grid{grid-template-columns:1fr}
+  .p5{grid-column:auto}
+  .handle{font-size:18px}
+  .contact-card li{align-items:flex-start}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
